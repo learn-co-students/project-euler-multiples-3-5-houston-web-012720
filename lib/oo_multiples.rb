@@ -8,15 +8,7 @@ class Multiples
     end
 
     def collect_multiples
-        mpl = []
-        x = 3
-        while x < @limit
-            if x%3 == 0 || x%5 == 0
-                mpl << x
-            end
-            x = x+1
-        end
-    mpl
+        (3..@limit-1).select{|x| x%3 == 0 || x%5 == 0}
     end
     
     def sum_multiples
